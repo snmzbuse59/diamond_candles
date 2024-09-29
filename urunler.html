@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>Ürünler - Diamond Candles</title>
+    <style>
+        /* Genel stil */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+        }
+
+        /* Menü */
+        nav {
+            background-color: #333;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a:hover {
+            color: #ff6347;
+        }
+
+        /* Sepet ve Kullanıcı Alanı */
+        .user-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-area a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .user-area a:hover {
+            color: #ff6347;
+        }
+
+        .user-area a i {
+            font-size: 15px;
+            /* İkon boyutunu artırdım */
+        }
+
+        /* Ürünler */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .product-card {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            margin: 15px 0;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .product-card button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .product-card button:hover {
+            background-color: #ff4500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ff6347;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Menü -->
+    <nav>
+        <div class="logo">
+            <a href="index.html" style="color: white; font-size: 24px;">Diamond Candles</a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="urunler.html">Ürünler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            </ul>
+            <div class="user-area">
+                <a href="#" title="Sepet"><i class="fas fa-shopping-cart"></i></a>
+                <a href="#" title="Giriş Yap"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ürünler -->
+    <section class="products">
+        <div class="product-card">
+            <img src="img/11.png" alt="Alevin Fısıltısı">
+            <h3>Alevin Fısıltısı</h3>
+            <p>"Narince yanan alevin fısıltıları, odanızı huzur dolu bir atmosfere dönüştürür. Yavaşça yayılan
+                sıcaklığıyla ruhunuza sakinlik ve denge getirir."</p>
+            <button>Satın Al</button>
+            <button>Sepete Ekle</button>
+        </div>
+        <div class="product-card">
+            <img src="img/22.png" alt="Sükûnet Işığı">
+            <h3>Sükûnet Işığı</h3>
+            <p>"Doğal kokular ve zarif ışık, bu mumla bir araya geliyor. Sükûnet Işığı, günün yorgunluğunu atıp derin
+                bir nefes almanıza yardımcı olur."</p>
+            <button>Satın Al</button>
+            <button>Sepete Ekle</button>
+        </div>
+        <div class="product-card">
+            <img src="img/33.png" alt="Gizemli Duruş">
+            <h3>Gizemli Duruş</h3>
+            <p>"Bu mumun mistik kokusu ve sofistike görünümü, her anınıza zarafet katarken, gizemli bir atmosfer
+                yaratır. Evde sıcak bir büyü oluşturur."</p>
+            <button>Satın Al</button>
+            <button>Sepete Ekle</button>
+        </div>
+        <div class="product-card">
+            <img src="img/44.png" alt="Yenilikçi Işık">
+            <h3>Yenilikçi Işık</h3>
+            <p>"Bu mum, modern tasarımı ve benzersiz kokusuyla evinize farklı bir hava katacak."</p>
+            <button>Satın Al</button>
+            <button>Sepete Ekle</button>
+        </div>
+        <div class="product-card">
+            <img src="img/55.png" alt="Rüya Kokan">
+            <h3>Rüya Kokan</h3>
+            <p>"Tatlı ve huzur verici aromasıyla, her anınızı güzelleştirecek bir seçim."</p>
+            <button>Satın Al</button>
+            <button>Sepete Ekle</button>
+        </div>
+        <div class="product-card">
+            <img src="img/66.png" alt="Sakinleştirici Nefes">
+            <h3>Sakinleştirici Nefes</h3>
+            <p>"Zarif tasarımı ve rahatlatıcı kokusuyla, günün yorgunluğunu atmanıza yardımcı olur."</p>
+            <button>Satın Al</button>
+            <button>Sepete Ekle</button>
+        </div>
+        <div class="product-card">
+            <img src="img/66.png" alt="Aşk Işığı">
+            <h3>Aşk Işığı</h3>
+            <p>"Aşkı simgeleyen bu mum, romantik anlarınızı taçlandırır."</p>
+            <button>Satın Al</button>
+            <button>Sepete Ekle</button>
+        </div>
+        <div class="product-card">
+            <img src="img/11.png" alt="Rüzgarın Sesi">
+            <h3>Rüzgarın Sesi</h3>
+            <p>"Doğanın huzurunu evinize getiren bu mum, ferahlatıcı bir deneyim sunar."</p>
+            <button>Satın Al</button>
+            <button>Sepete Ekle</button>
+        </div>
+        <div class="product-card">
+            <img src="img/22.png" alt="Gündoğumu Rengi">
+            <h3>Gündoğumu Rengi</h3>
+            <p>"Sıcak renk tonlarıyla evinize pozitif enerji katar."</p>
+            <button>Satın Al</button>
+            <button>Sepete Ekle</button>
+        </div>
+        <div class="product-card">
+            <img src="img/33.png" alt="Deniz Esintisi">
+            <h3>Deniz Esintisi</h3>
+            <p>"Deniz havasını evinize getiren bu mum, huzur dolu bir atmosfer yaratır."</p>
+            <button>Satın Al</button>
+            <button>Sepete Ekle</button>
+        </div>
+        <div class="product-card">
+            <img src="img/44.png" alt="Bahar Çiçeği">
+            <h3>Bahar Çiçeği</h3>
+            <p>"Baharın tazeliğini evinize taşıyan bu mum, ferah bir atmosfer yaratır."</p>
+            <button>Satın Al</button>
+            <button>Sepete Ekle</button>
+        </div>
+        <div class="product-card">
+            <img src="img/55.png" alt="Kış Masalı">
+            <h3>Kış Masalı</h3>
+            <p>"Kış mevsiminin sıcaklığını yansıtan bu mum, rahat bir ortam yaratır."</p>
+            <button>Satın Al</button>
+            <button>Sepete Ekle</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; diamondcandles2022 | <a href="#">Gizlilik Politikası</a> | <a href="#">Şartlar ve Koşullar</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
