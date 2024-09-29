@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Sepetim - Diamond Candles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cart-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .cart-item h3 {
+            margin: 0;
+        }
+
+        .cart-item button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-item button:hover {
+            background-color: #ff4500;
+        }
+        html {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Tüm yüksekliği kapsar */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        /* Menü */
+        nav {
+            background-color: #333;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a:hover {
+            color: #ff6347;
+        }
+
+        /* Sepet ve Kullanıcı Alanı */
+        .user-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-area a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .user-area a:hover {
+            color: #ff6347;
+        }
+
+        .user-area a i {
+            font-size: 15px; /* İkon boyutunu artırdım */
+        }
+
+        /* Giriş alanı */
+        .login-section {
+            padding: 40px;
+            text-align: center;
+            flex: 1; /* Sayfanın geri kalan kısmını kaplar */
+            display: flex;
+            justify-content: center; /* Yatay ortalama */
+            align-items: center; /* Dikey ortalama */
+            background: white; /* Arka plan rengini beyaz yap */
+            border-radius: 10px; /* Kenarları yuvarla */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+            margin: 20px; /* Etrafına boşluk ekle */
+        }
+
+        /* Formun içindeki giriş alanları */
+        .login-section form {
+            width: 100%; /* Formun genişliği */
+            max-width: 400px; /* Maksimum genişlik */
+        }
+
+        .login-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-section form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .login-section form button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-section form button:hover {
+            background-color: #ff4500;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto; /* Sayfanın altına itmek için */
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ff6347;
+        }
+    </style>
+</head>
+
+<body>
+        <!-- Menü -->
+        <nav>
+            <div class="logo">
+                <a href="index.html" style="color: white; font-size: 24px;">Diamond Candles</a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="urunler.html">Ürünler</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                </ul>
+                <div class="user-area">
+                    <a href="urunler.html" title="Sepet">
+                        <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
+                    </a>
+                    <a href="#" title="Giriş Yap"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </nav>
+
+    <div class="container">
+        <h1>Sepetim</h1>
+
+        <!-- Ürünler -->
+        <div class="cart-item">
+            <img src="img/11.png" alt="Ürün 1">
+            <h3>Alevin Fısıltısı</h3>
+            <p>150 TL</p>
+            <button>Sil</button>
+        </div>
+
+        <div class="cart-item">
+            <img src="img/22.png" alt="Ürün 2">
+            <h3>Sükûnet Işığı</h3>
+            <p>200 TL</p>
+            <button>Sil</button>
+        </div>
+
+        <div class="cart-item">
+            <img src="img/33.png" alt="Ürün 3">
+            <h3>Gizemli Duruş</h3>
+            <p>250 TL</p>
+            <button>Sil</button>
+        </div>
+
+        <div class="text-center">
+            <button class="btn btn-primary">Satın Al</button>
+        </div>
+    </div>
+ <!-- Footer -->
+ <footer>
+    <p>&copy; 2024 Diamond Candles. Tüm Hakları Saklıdır. <a href="sartlar.html">Şartlar ve Koşullar</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
